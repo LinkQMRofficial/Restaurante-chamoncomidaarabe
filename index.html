@@ -1,1 +1,740 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chamón Comida Árabe - Auténtica gastronomía árabe en Santa Cruz de la Sierra, Bolivia. Shawarma, Kibbe, Hummus y más.">
+    <meta name="keywords" content="comida árabe, restaurante, Santa Cruz, Bolivia, shawarma, kibbe, hummus, falafel">
+    
+    <title>Chamón Comida Árabe | Sabores del Medio Oriente en Santa Cruz</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="logo-loader">
+                <svg viewBox="0 0 100 100" class="logo-svg">
+                    <path class="logo-path" d="M50 10 C25 10 10 30 10 50 C10 70 25 90 50 90 C75 90 90 70 90 50 C90 30 75 10 50 10"/>
+                    <path class="logo-inner" d="M50 25 L60 45 L50 65 L40 45 Z"/>
+                </svg>
+            </div>
+            <p class="loader-text">Preparando tu experiencia...</p>
+        </div>
+    </div>
 
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <img src="https://i.imgur.com/placeholder.png" alt="Chamón Logo" class="logo-img" onerror="this.style.display='none'">
+                <span class="logo-text">Chamón</span>
+            </a>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Menú">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Inicio</a></li>
+                <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+                <li><a href="#menu" class="nav-link">Menú</a></li>
+                <li><a href="#testimonios" class="nav-link">Opiniones</a></li>
+                <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+                <li><a href="#contacto" class="nav-link nav-cta">Reservar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <div class="hero-pattern"></div>
+            <div class="hero-gradient"></div>
+            <div class="floating-elements">
+                <div class="floating-spice spice-1"></div>
+                <div class="floating-spice spice-2"></div>
+                <div class="floating-spice spice-3"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down" data-aos-delay="200">
+                <span class="badge-icon">★</span>
+                <span>Travellers' Choice - Top 10%</span>
+            </div>
+            
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="400">
+                <span class="title-line">Chamón</span>
+                <span class="title-arabic">شامون</span>
+                <span class="title-subtitle">Comida Árabe</span>
+            </h1>
+            
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="600">
+                Desde nuestro hogar, al de ustedes. Inspirados por nuestras raíces, 
+                preparamos con dedicación cada uno de nuestros platos para ofrecerles 
+                una experiencia más cercana a la cultura árabe.
+            </p>
+            
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="800">
+                <a href="#menu" class="btn btn-primary">
+                    <span>Explorar Menú</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="https://maps.app.goo.gl/rxhaGzGKLEwqAAG49" target="_blank" class="btn btn-secondary">
+                    <span>Cómo Llegar</span>
+                </a>
+            </div>
+            
+            <div class="hero-social" data-aos="fade-up" data-aos-delay="1000">
+                <a href="https://www.instagram.com/chamoncomidaarabe/?hl=es-la" target="_blank" class="social-link" aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://www.tiktok.com/@chamon.comida.arabe1" target="_blank" class="social-link" aria-label="TikTok">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/share/17kemN7pbR/" target="_blank" class="social-link" aria-label="Facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1200">
+            <span>Descubre más</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experiencia" class="experience">
+        <div class="section-container">
+            <div class="experience-grid">
+                <div class="experience-content" data-aos="fade-right">
+                    <span class="section-tag">Nuestra Historia</span>
+                    <h2 class="section-title">
+                        Una tradición que <br>
+                        <span class="highlight">trasciende fronteras</span>
+                    </h2>
+                    <p class="experience-text">
+                        En Chamón, cada plato cuenta una historia. Nuestras recetas viajan desde 
+                        el corazón del Medio Oriente hasta Santa Cruz de la Sierra, trayendo consigo 
+                        siglos de tradición culinaria árabe.
+                    </p>
+                    <p class="experience-text">
+                        Preparamos con amor el shawarma jugoso que se deshace en tu boca, 
+                        los kibbeh crujientes por fuera y tiernos por dentro, y el hummus 
+                        cremoso que acompaña cada bocado con la hospitalidad que nos caracteriza.
+                    </p>
+                    
+                    <div class="experience-features">
+                        <div class="feature" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Recetas Auténticas</h4>
+                                <p>Ingredientes frescos y técnicas tradicionales</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature" data-aos="fade-up" data-aos-delay="400">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Hecho con Amor</h4>
+                                <p>Dedicación en cada preparación</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature" data-aos="fade-up" data-aos-delay="600">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Siempre Fresco</h4>
+                                <p>Preparado al momento de tu pedido</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-visual" data-aos="fade-left">
+                    <div class="visual-frame">
+                        <div class="frame-decoration"></div>
+                        <div class="image-stack">
+                            <div class="stack-image img-1">
+                                <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=400&h=500&fit=crop" alt="Shawarma tradicional" loading="lazy">
+                            </div>
+                            <div class="stack-image img-2">
+                                <img src="https://images.unsplash.com/photo-1547516508-49458f9eb6c7?w=300&h=400&fit=crop" alt="Platos árabes" loading="lazy">
+                            </div>
+                            <div class="stack-image img-3">
+                                <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=250&h=300&fit=crop" alt="Especias árabes" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="visual-badge">
+                            <span class="badge-number">5.0</span>
+                            <span class="badge-text">Calificación</span>
+                            <div class="badge-stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="arabesque-divider">
+            <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+                <path d="M0,30 Q150,0 300,30 T600,30 T900,30 T1200,30" stroke="currentColor" fill="none" stroke-width="1"/>
+                <path d="M0,30 Q150,60 300,30 T600,30 T900,30 T1200,30" stroke="currentColor" fill="none" stroke-width="1"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="menu-bg-pattern"></div>
+        
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Nuestro Menú</span>
+                <h2 class="section-title">
+                    Sabores que <span class="highlight">enamoran</span>
+                </h2>
+                <p class="section-subtitle">
+                    Descubre nuestra selección de platos tradicionales, preparados con las 
+                    mejores especias y el sabor auténtico del Medio Oriente.
+                </p>
+            </div>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="entradas">Entradas</button>
+                <button class="category-btn" data-category="principales">Principales</button>
+                <button class="category-btn" data-category="acompañamientos">Acompañamientos</button>
+            </div>
+            
+            <div class="menu-grid">
+                <!-- Shawarma -->
+                <article class="menu-card" data-category="principales" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=400&h=300&fit=crop" alt="Shawarma de Pollo" loading="lazy">
+                        <div class="card-badge">Popular</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Shawarma</h3>
+                            <span class="card-price">Bs. 35</span>
+                        </div>
+                        <p>Finas láminas de carne especiada, servidas en pan pita con vegetales frescos y nuestra salsa de ajo especial.</p>
+                        <div class="card-tags">
+                            <span class="tag">Pollo</span>
+                            <span class="tag">Carne</span>
+                            <span class="tag">Mixto</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Kibbe Frito -->
+                <article class="menu-card" data-category="entradas" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1604909052743-94e838986d24?w=400&h=300&fit=crop" alt="Kibbe Frito" loading="lazy">
+                        <div class="card-badge">Favorito</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Kibbe Frito</h3>
+                            <span class="card-price">Bs. 25</span>
+                        </div>
+                        <p>Croquetas de trigo bulgur rellenas de carne especiada, piñones y cebolla. Crujientes por fuera, jugosas por dentro.</p>
+                        <div class="card-tags">
+                            <span class="tag">Crujiente</span>
+                            <span class="tag">Tradicional</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Hummus -->
+                <article class="menu-card" data-category="acompañamientos" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1577805947697-89e18249d767?w=400&h=300&fit=crop" alt="Hummus" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Hummus</h3>
+                            <span class="card-price">Bs. 20</span>
+                        </div>
+                        <p>Cremosa pasta de garbanzos con tahini, aceite de oliva y un toque de limón. Acompañado de pan pita recién horneado.</p>
+                        <div class="card-tags">
+                            <span class="tag">Vegano</span>
+                            <span class="tag">Sin Gluten</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Niños Envueltos -->
+                <article class="menu-card" data-category="principales" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1534352956036-cd81e27dd615?w=400&h=300&fit=crop" alt="Niños Envueltos en Parra" loading="lazy">
+                        <div class="card-badge">Especial</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Niños Envueltos</h3>
+                            <span class="card-price">Bs. 40</span>
+                        </div>
+                        <p>Hojas de parra rellenas de arroz aromático con carne, hierbas frescas y especias tradicionales árabes.</p>
+                        <div class="card-tags">
+                            <span class="tag">Hecho a mano</span>
+                            <span class="tag">Tradicional</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Falafel -->
+                <article class="menu-card" data-category="entradas" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1593001874117-c99c800e3eb7?w=400&h=300&fit=crop" alt="Falafel" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Falafel</h3>
+                            <span class="card-price">Bs. 22</span>
+                        </div>
+                        <p>Croquetas de garbanzo con perejil, cilantro y especias, fritas hasta quedar doradas y crujientes.</p>
+                        <div class="card-tags">
+                            <span class="tag">Vegano</span>
+                            <span class="tag">Crujiente</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Muhammara -->
+                <article class="menu-card" data-category="acompañamientos" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop" alt="Muhammara" loading="lazy">
+                        <div class="card-badge">Tip Foodie</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Muhammara</h3>
+                            <span class="card-price">Bs. 18</span>
+                        </div>
+                        <p>Exquisita salsa de pimientos rojos asados con nueces, granada y un toque de comino. Imperdible.</p>
+                        <div class="card-tags">
+                            <span class="tag">Vegano</span>
+                            <span class="tag">Picante</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Pilaf -->
+                <article class="menu-card" data-category="acompañamientos" data-aos="fade-up" data-aos-delay="700">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&h=300&fit=crop" alt="Arroz Pilaf" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Arroz Pilaf</h3>
+                            <span class="card-price">Bs. 15</span>
+                        </div>
+                        <p>Arroz aromático cocido con caldo especiado, almendras tostadas y pasas doradas.</p>
+                        <div class="card-tags">
+                            <span class="tag">Aromático</span>
+                            <span class="tag">Tradicional</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Shanklis -->
+                <article class="menu-card" data-category="entradas" data-aos="fade-up" data-aos-delay="800">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=300&fit=crop" alt="Shanklis" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Shanklis</h3>
+                            <span class="card-price">Bs. 28</span>
+                        </div>
+                        <p>Bolitas de queso fermentado con especias, servidas con aceite de oliva y pan pita caliente.</p>
+                        <div class="card-tags">
+                            <span class="tag">Queso</span>
+                            <span class="tag">Artesanal</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="menu-cta" data-aos="fade-up">
+                <p>¿Quieres ver más opciones? Visítanos o haz tu pedido</p>
+                <div class="cta-buttons">
+                    <a href="tel:+59178499566" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <span>Llamar Ahora</span>
+                    </a>
+                    <a href="https://www.instagram.com/chamoncomidaarabe/?hl=es-la" target="_blank" class="btn btn-secondary">
+                        <span>Ver en Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials">
+        <div class="testimonials-bg">
+            <div class="geometric-pattern"></div>
+        </div>
+        
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Testimonios</span>
+                <h2 class="section-title">
+                    Lo que dicen <span class="highlight">nuestros clientes</span>
+                </h2>
+            </div>
+            
+            <div class="testimonials-slider" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <blockquote>
+                            "Una experiencia diferente que tienen que tener al menos una vez en la vida. 
+                            No pueden perderse el muhammara, la salsa de pimientos rojos, mejor aún 
+                            acompañada con el Pilaf y los Niños Envueltos. ¡Increíble!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <span>F</span>
+                            </div>
+                            <div class="author-info">
+                                <strong>Foodish Bolivia</strong>
+                                <span>Food Blogger</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <blockquote>
+                            "Los kibbeh fritos son adictivos, crujientes por fuera y super jugosos 
+                            por dentro. La atención es excelente y el ambiente muy acogedor. 
+                            Definitivamente mi lugar favorito de comida árabe en Santa Cruz."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <span>G</span>
+                            </div>
+                            <div class="author-info">
+                                <strong>Gabrielle M.</strong>
+                                <span>Tripadvisor Review</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <blockquote>
+                            "El shawarma más auténtico que he probado fuera del Medio Oriente. 
+                            Se nota la dedicación y el amor con que preparan cada plato. 
+                            El hummus es cremoso y lleno de sabor. ¡Volveré pronto!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <span>R</span>
+                            </div>
+                            <div class="author-info">
+                                <strong>Roberto S.</strong>
+                                <span>Cliente Frecuente</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <blockquote>
+                            "Pedidos de lunes a domingo, siempre frescos y deliciosos. 
+                            Los niños envueltos en parra son simplemente perfectos. 
+                            Un pedacito del Medio Oriente en Santa Cruz."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <span>M</span>
+                            </div>
+                            <div class="author-info">
+                                <strong>María Elena</strong>
+                                <span>Cliente Habitual</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev" aria-label="Anterior">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <div class="slider-dots"></div>
+                    <button class="slider-btn next" aria-label="Siguiente">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="trust-badges" data-aos="fade-up" data-aos-delay="400">
+                <div class="trust-badge">
+                    <div class="badge-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <div class="badge-content">
+                        <strong>Travellers' Choice</strong>
+                        <span>Top 10% en Tripadvisor</span>
+                    </div>
+                </div>
+                
+                <div class="trust-badge">
+                    <div class="badge-icon">
+                        <span class="rating-number">5.0</span>
+                    </div>
+                    <div class="badge-content">
+                        <strong>Calificación Perfecta</strong>
+                        <span>En Google Reviews</span>
+                    </div>
+                </div>
+                
+                <div class="trust-badge">
+                    <div class="badge-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <div class="badge-content">
+                        <strong>Hecho con Amor</strong>
+                        <span>Desde Santa Cruz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="ubicacion" class="location">
+        <div class="section-container">
+            <div class="location-grid">
+                <div class="location-info" data-aos="fade-right">
+                    <span class="section-tag">Encuéntranos</span>
+                    <h2 class="section-title">
+                        Visítanos en <span class="highlight">Santa Cruz</span>
+                    </h2>
+                    
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Dirección</h4>
+                                <p>Av. Beni casi 6to Anillo<br>Calle Venus #5685<br>Santa Cruz de la Sierra, Bolivia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Horarios</h4>
+                                <p><strong>Pedidos:</strong> Lunes a Domingo<br>
+                                   <strong>Local:</strong> Viernes y Sábado desde 18:00h<br>
+                                   Domingo desde 11:30h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Contacto</h4>
+                                <p>WhatsApp: <a href="https://wa.me/59178499566">+591 78499566</a><br>
+                                   También en Pedidos Ya!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://maps.app.goo.gl/rxhaGzGKLEwqAAG49" target="_blank" class="btn btn-primary btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Abrir en Google Maps</span>
+                    </a>
+                </div>
+                
+                <div class="location-map" data-aos="fade-left">
+                    <div class="map-wrapper">
+                        <div class="map-frame"></div>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3797.8595!2d-63.1823!3d-17.7642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e7f8f8f8f8f8%3A0x8f8f8f8f8f8f8f8f!2sCham%C3%B3n%20Comida%20%C3%81rabe!5e0!3m2!1ses!2sbo!4v1234567890"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Ubicación de Chamón Comida Árabe">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="footer-pattern"></div>
+        
+        <div class="footer-content">
+            <div class="section-container">
+                <div class="footer-grid">
+                    <div class="footer-brand" data-aos="fade-up">
+                        <div class="brand-logo">
+                            <span class="logo-text-footer">Chamón</span>
+                            <span class="logo-arabic">شامون</span>
+                        </div>
+                        <p class="brand-tagline">
+                            Desde nuestro hogar, al de ustedes. Auténticos sabores 
+                            del Medio Oriente en Santa Cruz de la Sierra.
+                        </p>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/chamoncomidaarabe/?hl=es-la" target="_blank" class="social-btn" aria-label="Instagram">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.tiktok.com/@chamon.comida.arabe1" target="_blank" class="social-btn" aria-label="TikTok">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/share/17kemN7pbR/" target="_blank" class="social-btn" aria-label="Facebook">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://wa.me/59178499566" target="_blank" class="social-btn" aria-label="WhatsApp">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
+                        <h4>Navegación</h4>
+                        <ul>
+                            <li><a href="#hero">Inicio</a></li>
+                            <li><a href="#experiencia">Nuestra Historia</a></li>
+                            <li><a href="#menu">Menú</a></li>
+                            <li><a href="#testimonios">Opiniones</a></li>
+                            <li><a href="#ubicacion">Ubicación</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+                        <h4>Especialidades</h4>
+                        <ul>
+                            <li><a href="#menu">Shawarma</a></li>
+                            <li><a href="#menu">Kibbe Frito</a></li>
+                            <li><a href="#menu">Hummus</a></li>
+                            <li><a href="#menu">Niños Envueltos</a></li>
+                            <li><a href="#menu">Falafel</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact" data-aos="fade-up" data-aos-delay="300">
+                        <h4>Contáctanos</h4>
+                        <p>
+                            <strong>Teléfono/WhatsApp:</strong><br>
+                            <a href="tel:+59178499566">+591 78499566</a>
+                        </p>
+                        <p>
+                            <strong>Dirección:</strong><br>
+                            Av. Beni casi 6to Anillo<br>
+                            Calle Venus #5685<br>
+                            Santa Cruz de la Sierra
+                        </p>
+                        <p class="delivery-note">
+                            🛵 También en <strong>Pedidos Ya!</strong>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        <p>&copy; 2026 Chamón Comida Árabe. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="footer-arabesque">
+                        <svg viewBox="0 0 200 20" preserveAspectRatio="none">
+                            <path d="M0,10 Q25,0 50,10 T100,10 T150,10 T200,10" stroke="currentColor" fill="none" stroke-width="1"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
